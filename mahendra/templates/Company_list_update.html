@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> From Submit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="">
+</head>
+{% block main_content %}
+<style>
+    body {
+
+        margin: 0%;
+        padding: 0%;
+        background-color: gold;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .backspace {
+        background-color: yellow;
+        width: 100%;
+        cursor: pointer;
+        height: 20px;
+    }
+
+    .backspace i {
+        margin-right: 1150px;
+        margin-top: 25PX;
+        font-size: 25PX;
+    }
+
+    .backspace I:hover {
+        color: red;
+    }
+
+    h1 {
+        margin-top: -5px;
+        height: 60px;
+        color: black;
+        background-color: yellow;
+
+    }
+
+
+    input {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 30%;
+        margin-top: 20px;
+        background-color: aliceblue;
+
+    }
+
+    .fileld fieldset {
+        margin-left: 10px;
+        margin-right: 280px;
+        margin-top: 50px;
+        border-radius: 5px;
+        height: 400px;
+    }
+
+    .fileld legend {
+        color: black;
+        font-size: 30px;
+        border-radius: 5px;
+        margin-left: -320;
+    }
+</style>
+
+<body>
+    <div class="backspace">
+        <a href="http://127.0.0.1:8000/Company-data-show"
+            style="text-decoration: none; display: contents; color: black;">
+
+            <i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
+    <h1>Company is update detail</h1>
+    <form action="{% url 'company_update' i.id %}" method="post">
+        {% csrf_token %}
+        <div class="fileld">
+            <fieldset>
+                <legend><b>Fill Detail:</legend>
+                <div class="inp">
+                    <input value="{{i.Cname}}" type="text" size="40px;" name="Cname" placeholder=" Company Name"
+                        required>
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <input value="{{i.C_contact}}" size="40px;" type="text" name="C_contact"
+                        placeholder="Company Contact" required>
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <input value="{{i.CEmail}}" size="40px;" type="text" name="CEmail" placeholder="Company Email"
+                        required>
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <input value="{{i.Caddress}}" size="40px;" type="text" name="Caddress" placeholder="Address"
+                        required>
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <input value="{{i.City}}" size="40px;" type="text" name="City" placeholder="City" required>
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <input value="{{i.CWebsite}}" size="40px;" type="text" name="CWebsite" placeholder="Company Website"
+                        required>
+                    <input value="{{i.CLinkedin_URL}}" size="40px;" type="text" name="CLinkedin_URL"
+                        placeholder="Company Linkedin " required>
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <a href="http://127.0.0.1:8000/Company-data-show"> <input type="submit" value="Update"
+                            style="cursor: pointer;"></a>
+
+            </fieldset>
+
+    </form>
+    <script src="" async defer></script>
+    {% endblock main_content %}
+</body>
+
+</html>

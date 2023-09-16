@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> From Submit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="">
+</head>
+{% block main_content %}
+<style>
+    body {
+
+        margin: 0%;
+        padding: 0%;
+        background-color: darkblue;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .backspace {
+        background-color: white;
+        width: 100%;
+
+        cursor: pointer;
+
+    }
+
+    .backspace i {
+        margin-right: 1150px;
+        margin-top: 30PX;
+        font-size: 25PX;
+    }
+
+    .backspace I:hover {
+        color: red;
+    }
+
+    h1 {
+        background-color: white;
+        height: 50px;
+        margin-top: -28px;
+    }
+
+    .inp {
+
+        margin: 20px;
+        font-size: 40px;
+        border-radius: 5px;
+    }
+
+    input {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: paleturquoise;
+    }
+
+    .fileld fieldset {
+        margin-left: 60px;
+        margin-right: 80px;
+    }
+
+    .fileld legend {
+        margin-left: -360px;
+        font-size: 30px;
+        color: white;
+    }
+
+    button {
+        font-size: 30px;
+
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+</style>
+
+<body>
+    <div class="backspace">
+        <a href="http://127.0.0.1:8000/" style="text-decoration: none; display: contents; color: black;">
+
+            <i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+    <h1>Company Detail</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="fileld">
+            <fieldset>
+                <legend><b>Fill Detail:</legend>
+                <div class="inp">
+                    <input value="{{data.name}}" type="text" size="40px;" name="Cname" placeholder=" Company Name"
+                        required>
+                    <input value="{{data.condect}}" size="40px;" type="text" name="C_contact"
+                        placeholder="Company Contact" required>
+                    <input value="{{data.Current_company_name}}" size="40px;" type="text" name="CEmail"
+                        placeholder="Company Email" required>
+                    <input value="{{data.location}}" size="40px;" type="text" name="Caddress" placeholder="Address"
+                        required>
+                    <input value="{{data.Experience}}" size="40px;" type="text" name="City" placeholder="City" required>
+                    <input value="{{data.Cost}}" size="40px;" type="text" name="CWebsite" placeholder="Company Website"
+                        required>
+                    <input value="{{data.ECTC}}" size="40px;" type="text" name="CLinkedin_URL"
+                        placeholder="Company Linkedin " required>
+                    <button>Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </fieldset>
+
+    </form>
+    <script src="" async defer></script>
+    {% endblock main_content %}
+</body>
+
+</html>

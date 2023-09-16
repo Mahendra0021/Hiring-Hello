@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Hiring</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    body {
+        margin: 0%;
+        padding: 0%;
+        background-color: white;
+    }
+
+    .backspace {
+        background-color: #425664;
+        width: 100%;
+        cursor: pointer;
+        height: 20px;
+    }
+
+    .backspace i {
+        margin-left: 20px;
+        margin-top: 25PX;
+        font-size: 25PX;
+        color: white;
+    }
+
+    .backspace I:hover {
+        color: black;
+    }
+
+
+    h1 {
+        text-align: center;
+        background: #425664;
+        margin-top: -5px;
+        height: 60px;
+        color: wheat;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    table {
+        margin-left: 50px;
+        margin-top: 50px;
+        border-spacing: 50px;
+        border-radius: 6px;
+
+    }
+
+
+    td {
+        width: 250px;
+        height: 170px;
+        border: 1px;
+        border-radius: 10px;
+        background: #C6AD8F;
+        border: 1px solid;
+        border: 1px solid black;
+    }
+
+
+
+    td a {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    td button {
+        background-color: #425664;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 5px;
+        width: 170px;
+        height: 40px;
+        margin-left: 30px;
+        ;
+    }
+</style>
+
+<body>
+    <table>
+        <div class="backspace">
+            <a href="http://127.0.0.1:8000/" style="text-decoration: none; display: contents; color: black;">
+
+                <i class="fa-sharp fa-solid fa-house"></i></a>
+        </div>
+        <h1>Hiring Hello</h1>
+
+        <td>
+            <a href="{% url 'conlist'%}">
+                <button> Candidate List</a></button><br>
+            <a href="{% url 'products' %}">
+                <button style="margin-top: 20px;"> Add Candidate</a></button>
+        </td>
+
+
+        <td>
+            <a href="{% url 'company-data'%}">
+                <button> Company List</a></button><br>
+            <a href="{% url 'addcompany' %}">
+                <button style="margin-top: 20px;"> Add Company</a></button>
+        </td>
+
+
+    </table>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+</body>
+
+</html>

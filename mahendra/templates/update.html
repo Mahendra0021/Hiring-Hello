@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> From Submit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="">
+</head>
+{% block main_content %}
+<style>
+    body {
+
+        margin: 0%;
+        padding: 0%;
+        background-color: #003333;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .backspace {
+        background-color: darkorange;
+        width: 100%;
+        cursor: pointer;
+        height: 20px;
+    }
+
+    .backspace i {
+        margin-right: 1150px;
+        margin-top: 25PX;
+        font-size: 25PX;
+    }
+
+    .backspace i:hover {
+        color: red;
+    }
+
+    h1 {
+        background-color: darkorange;
+        height: 50px;
+        margin-top: -0px;
+
+    }
+
+
+    input {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 30%;
+        background-color: darkorange;
+
+    }
+
+    .fileld fieldset {
+        margin-left: 60px;
+        margin-right: 80px;
+
+    }
+
+    .fileld legend {
+        margin-left: -320px;
+        font-size: 30;
+        color: aliceblue;
+    }
+
+    button {
+        font-size: 30px;
+        margin-left: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: blue;
+
+    }
+</style>
+
+<body>
+
+    <div class="backspace">
+        <a href="http://127.0.0.1:8000/condideteList" style="text-decoration: none; display: contents; color: black;">
+
+            <i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+    <h1>Candidete Detail From</h1>
+
+    <form action="{% url 'uprce' mem.id %}" method="post">
+        {% csrf_token %}
+        <div class="fileld">
+            <fieldset>
+                <legend><b>Candidete Detail:</legend>
+
+                <input value="{{mem.name}}" type="text" size="40px;" name="namee" placeholder="Name" required>
+                <input value="{{mem.condect}}" size="40px;" type="text" name="Contacted" placeholder="Contact" required>
+                <input value="{{mem.Current_company_name}}" size="40px;" type="text" name="Current"
+                    placeholder="Current Company Name" required>
+                <input value="{{mem.location}}" size="40px;" type="text" name="Location" placeholder="Location"
+                    required>
+                <input value="{{mem.Experience}}" size="40px;" type="text" name="Experience" placeholder="Experience"
+                    required>
+                <input value="{{mem.Cost}}" size="40px;" type="text" name="Cost" placeholder=" Cost to Company"
+                    required>
+                <input value="{{mem.ECTC}}" size="40px;" type="text" name="Expected" placeholder=" Expected to Company"
+                    required>
+                <input value="{{mem.Perrefered_job_location}}" size="40px;" type="text" name="Perrefered"
+                    placeholder=" Perrefered job location" required>
+                <input value="{{mem.Notic}}" size="40px;" type="text" name="Notice" placeholder=" Notice" required>
+                <input value="{{mem.Linkedin_URL}}" size="40px;" type="text" name="Linkedin" placeholder=" Linkedin URL"
+                    required>
+                <input value="{{mem.Communication}}" size="40px;" type="text" name="Communication"
+                    placeholder=" Communication Rating" required>
+                <input value="{{mem.Feedback}}" size="40px;" type="text" name="Feedback" placeholder=" Feedback"
+                    required>
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input value="{{mem.File}}" type="file"
+                    id="myfile" style="margin-left:-170px; font-size:20px;" name="myfile">
+                <button>Update</button>
+            </fieldset>
+
+        </div>
+        </div>
+        </fieldset>
+    </form>
+
+
+    {% endblock main_content %}
+</body>
+
+</html>

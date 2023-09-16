@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> From Submit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="">
+</head>
+{% block main_content %}
+<style>
+    body {
+
+        margin: 0%;
+        padding: 0%;
+        background-color: darkslategray;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .backspace {
+        background-color: orange;
+        width: 100%;
+        cursor: pointer;
+        height: 20px;
+    }
+
+    .backspace i {
+        margin-right: 1150px;
+        margin-top: 25PX;
+        font-size: 25PX;
+    }
+
+    .backspace I:hover {
+        color: red;
+    }
+
+    h1 {
+        background: orange;
+        height: 50px;
+        margin-top: -0px;
+    }
+
+
+    input {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 28%;
+        background-color: gold;
+
+    }
+
+    fieldset {
+        margin-left: 60px;
+        margin-right: 80px;
+    }
+
+    legend {
+        margin-left: -320;
+    }
+
+    button {
+        font-size: 30px;
+        margin-left: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .field {
+        margin-top: 60px;
+    }
+
+    .field legend {
+        margin-left: -320px;
+    }
+
+    .field input {
+        width: 35%;
+    }
+
+    button {
+        font-size: 30px;
+        background-color: cornflowerblue;
+        padding: 5px;
+        width: 14%;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div class="backspace">
+        <a href="http://127.0.0.1:8000/" style="text-decoration: none; display: contents; color: black;">
+
+            <i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+    <h1>Candidete Detail From</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <fieldset>
+            <legend style="color: white; font-size:30px; "><b>Candidete Detail:</legend>
+
+            <input value="{{data.name}}" type="text" size="40px;" name="namee" placeholder="Name" required>
+            <input value="{{data.condect}}" size="40px;" type="text" name="Contacted" placeholder="Contact" required>
+            <input value="{{data.Current_company_name}}" size="40px;" type="text" name="Current"
+                placeholder="Current Company Name" required>
+            <input value="{{data.location}}" size="40px;" type="text" name="Location" placeholder="Location" required>
+            <input value="{{data.Experience}}" size="40px;" type="text" name="Experience" placeholder="Experience"
+                required>
+            <input value="{{data.Cost}}" size="40px;" type="text" name="Cost" placeholder=" Cost to Company" required>
+            <input value="{{data.ECTC}}" size="40px;" type="text" name="Expected" placeholder=" Expected to Company"
+                required>
+            <input value="{{data.Perrefered_job_location}}" size="40px;" type="text" name="Perrefered"
+                placeholder=" Perrefered job location" required>
+            <input value="{{data.Notic}}" size="40px;" type="text" name="Notice" placeholder=" Notice" required>
+            <input value="{{data.Linkedin_URL}}" size="40px;" type="text" name="Linkedin" placeholder=" Linkedin URL"
+                required>
+            <input value="{{data.Communication}}" size="40px;" type="text" name="Communication"
+                placeholder=" Communication Rating" required>
+            <input value="{{data.Feedback}}" size="40px;" type="text" name="Feedback" placeholder=" Feedback" required>
+            <input value="{{data.File}}" type="file" id="myfile" style="margin-left:-170px; font-size:20px;"
+                name="myfile" required>
+            <button>Submit</button>
+        </fieldset>
+        <div class="field">
+            <fieldset>
+                <legend style="color: white; font-size:30px;">Company Detail:</legend>
+
+                <input size="40px;" type="text" name="company" placeholder=" Company Name">
+                <input size="40px;" type="text" name="company" placeholder=" Company Update">
+                <input size="40px;" type="text" name="Screen" placeholder="Screen Rate" style="margin-left: -160px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button style="margin-top: 40px;">Submit</button>
+        </div>
+        </fieldset>
+    </form>
+    <script src="" async defer></script>
+    {% endblock main_content %}
+</body>
+
+</html>
